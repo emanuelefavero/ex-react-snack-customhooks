@@ -1,4 +1,5 @@
 import { Button } from './components/ui/Button';
+import { useDate } from './hooks/useDate';
 import { useSwitch } from './hooks/useSwitch';
 import './App.css';
 
@@ -13,12 +14,24 @@ const Snack1 = () => {
   );
 };
 
+const Snack2 = () => {
+  const currentDate = useDate();
+
+  return (
+    <div>
+      <h1>Data e ora attuali:</h1>
+      <p>{currentDate.toLocaleString()}</p>
+    </div>
+  );
+};
+
 export const App = () => {
   return (
     <main className='container'>
       <h1>React Snack Custom Hooks</h1>
 
       <Snack1 />
+      <Snack2 />
     </main>
   );
 };
