@@ -4,8 +4,6 @@ export const useKeyPress = key => {
   const [isKeyPressed, setIsKeyPressed] = useState(false);
 
   useEffect(() => {
-    setIsKeyPressed(false);
-
     const handleKeyDown = e => e.key === key && setIsKeyPressed(true);
     const handleKeyUp = e => e.key === key && setIsKeyPressed(false);
 
