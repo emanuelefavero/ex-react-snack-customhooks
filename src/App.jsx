@@ -54,16 +54,16 @@ export const App = () => {
     <main className='container'>
       <h1>React Snack Custom Hooks</h1>
 
-      <h2>Snack 1</h2>
+      <h2>Snack 1 - useSwitch</h2>
       <Snack1 />
 
-      <h2>Snack 2</h2>
+      <h2>Snack 2 - useDate</h2>
       <Snack2 />
 
-      <h2>Snack 3</h2>
+      <h2>Snack 3 - useCustomPointer</h2>
       <Snack3 />
 
-      <h2>Bonus</h2>
+      <h2>Bonus - useKeyPress</h2>
       <Bonus />
     </main>
   );
