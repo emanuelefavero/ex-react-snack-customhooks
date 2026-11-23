@@ -5,3 +5,9 @@ main {
     margin-top: 1rem;
   }
 }
+
+/* Hide default cursor, useful for useCustomPointer hook */
+.custom-pointer,
+.custom-pointer * {
+  cursor: none;
+}
