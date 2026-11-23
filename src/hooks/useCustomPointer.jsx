@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useMousePosition } from './useMousePosition';
 
-export const useCustomPointer = pointer => {
+export const useCustomPointer = component => {
   const { x, y } = useMousePosition();
 
   useEffect(() => {
@@ -16,10 +16,12 @@ export const useCustomPointer = pointer => {
         position: 'fixed',
         left: x,
         top: y,
-        pointerEvents: 'none',
+        translate: '-50% -50%',
+        pointerEvents: 'none', // Disable if cursor: 'none' is used below
+        // cursor: 'none', // Glitchy on Mac OS, prefer CSS class above
       }}
     >
-      {pointer}
+      {component}
     </div>
   );
 };
